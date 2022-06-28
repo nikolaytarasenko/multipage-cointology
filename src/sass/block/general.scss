@@ -56,6 +56,13 @@ img {
 .section {
   padding: 80px 0;
 
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: center;
+  }
+
   &__subtitle {
     font-weight: 600;
     font-size: 16px;
@@ -85,7 +92,7 @@ img {
   background: $color-blue-dark;
   color: #ffffff;
   border: 0;
-  border-radius: 60px;
+  border-radius: 8px;
   padding: 14px 23px;
   transition: 0.15s ease-out;
 
@@ -96,13 +103,19 @@ img {
   &_transparent {
     background: transparent;
     border: 2px solid $color-blue-light;
-    border-radius: 8px;
     color: $color-blue-light;
 
     &:hover {
       background: $color-blue-light;
       color: $color-white;
     }
+  }
+
+  &_dark {
+    background: #12151A;
+    font-weight: 700;
+    padding: 24px;
+    box-shadow: 15px 15px 32px rgba(0, 0, 0, 0.15);
   }
 }
 
