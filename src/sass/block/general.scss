@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: $base-font-size;
+}
+
+body {
+  height: 100%;
+  font-family: $font-family;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $content-size;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  color: red;
+  text-decoration: none;
+  transition: 0.15s ease-out;
+
+  &:hover {
+    color: #23233C;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.title {
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.875rem;
+  margin: 0;
+}
+
+.button {
+  background-color: $color-blue;
+  color: #ffffff;
+  border: 0;
+  border-radius: 60px;
+  padding: 14px 30px;
+  transition: 0.15s ease-out;
+
+  &:hover {
+    background-color: darken($color-blue, 10);
+  }
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
