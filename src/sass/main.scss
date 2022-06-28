@@ -1,3 +1,6 @@
+/* Custom */
+@import "block/custom.scss";
+
 /* Libs */
 @import "utils/libs.scss";
 
@@ -9,3 +12,5 @@
 @import 'block/general.scss';
 
 /* Blocks */
+@import 'block/header.scss';
+@import 'block/navbar.scss';

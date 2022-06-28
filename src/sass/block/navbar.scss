@@ -1,0 +1,21 @@
+.navbar-light {
+  &.navbar {
+    padding: 11px 0;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: #CCCCCC;
+      padding-bottom: 0;
+      line-height: 1;
+
+      &:hover {
+        color: $color-white;
+      }
+
+      &.active {
+        color: $color-white;
+      }
+    }
+  }
+}
