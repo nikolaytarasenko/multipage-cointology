@@ -1,0 +1,145 @@
+.instruments {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1300px;
+    height: 1300px;
+    left: -400px;
+    top: -100px;
+    background: rgba(48, 86, 152, 0.6);
+    box-shadow: 0 100px 100px rgba($color-blue-regular, 0.5);
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  &__title {
+    max-width: 800px;
+    margin: 0 auto 80px;
+  }
+
+  &__list {
+    position: relative;
+    min-height: 880px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(166.8% 1509.82% at 165.04% -66.8%, rgba(113, 157, 214, 0.3) 33.39%, rgba(113, 157, 214, 0) 100%), rgba(18, 21, 26, 0.5);
+    box-shadow: 4px 4px 250px #2B4378;
+    min-height: 104px;
+    min-width: 104px;
+    text-align: center;
+
+    &_1 {
+      top: 350px;
+      left: 0;
+      width: 227px;
+      height: 227px;
+      font-size: 13px;
+
+      .instruments__item-container {
+        max-width: 160px;
+        margin-top: -20px;
+      }
+    }
+
+    &_2 {
+      top: 30px;
+      left: 80px;
+      width: 198px;
+      height: 198px;
+    }
+
+    &_3 {
+      bottom: 0;
+      left: 190px;
+      width: 275px;
+      height: 275px;
+      font-size: 18px;
+
+      .instruments__item-container {
+        max-width: 175px;
+      }
+    }
+
+    &_4 {
+      top: 250px;
+      left: 250px;
+      width: 130px;
+      height: 130px;
+    }
+
+    &_5 {
+      top: 15px;
+      left: 391px;
+      width: 156px;
+      height: 156px;
+    }
+
+    &_6 {
+      bottom: 260px;
+      left: 414px;
+      width: 307px;
+      height: 307px;
+      font-size: 20px;
+
+      .instruments__item-container {
+        max-width: 195px;
+      }
+    }
+
+    &_7 {
+      bottom: 104px;
+      left: 560px;
+      width: 104px;
+      height: 104px;
+    }
+
+    &_8 {
+      top: 84px;
+      left: 602px;
+      width: 194px;
+      height: 194px;
+    }
+
+    &_9 {
+      bottom: 167px;
+      left: 765px;
+      width: 187px;
+      height: 187px;
+    }
+
+    &_10 {
+      top: 150px;
+      right: 25px;
+      width: 307px;
+      height: 307px;
+      font-size: 20px;
+
+      .instruments__item-container {
+        max-width: 195px;
+      }
+    }
+
+    &_11 {
+      right: 109px;
+      bottom: 0;
+      width: 156px;
+      height: 156px;
+    }
+
+    &_12 {
+      right: 0;
+      bottom: 220px;
+      width: 128px;
+      height: 128px;
+    }
+  }
+}
