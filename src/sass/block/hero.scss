@@ -1,0 +1,22 @@
+.hero {
+  background: url("../img/hero-bg.png") right bottom no-repeat;
+  background-size: 1115px 382px;
+
+  &__content {
+    margin-top: 56px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    @include media-breakpoint-up(lg) {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}
