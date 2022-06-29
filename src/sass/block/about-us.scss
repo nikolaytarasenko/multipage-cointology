@@ -1,0 +1,31 @@
+.about-us {
+  margin-top: 66px;
+  padding-bottom: 258px;
+  background: url("../img/about-us-bg.svg") right bottom no-repeat;
+  background-size: contain;
+
+  &__content {
+    max-width: 445px;
+  }
+
+  &__subtitle {
+    @include media-breakpoint-up(lg) {
+      display: inline-block;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+  }
+
+  &__img {
+    width: 812px;
+    height: 439px;
+    left: -24px;
+    position: absolute;
+    max-width: max-content;
+  }
+}

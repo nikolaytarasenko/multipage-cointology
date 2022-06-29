@@ -1,0 +1,19 @@
+.our-goal {
+  padding: 115px 0;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+  }
+}

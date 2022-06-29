@@ -1,0 +1,44 @@
+.principles {
+  padding: 100px 0;
+  background: rgba(43, 67, 120, 0.3);
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    background: rgba(18, 21, 26, 0.5);
+    border-radius: 6px;
+    text-align: center;
+
+    &_second {
+      margin: 0 auto;
+    }
+
+    &_third {
+      margin-left: auto;
+    }
+  }
+
+  &__item-icon {
+    margin-bottom: 20px;
+  }
+
+  &__item-title {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
