@@ -111,6 +111,22 @@ img {
     }
   }
 
+  &_start {
+    background: $color-blue-regular;
+    border-radius: 6px;
+    box-shadow: 8px 8px 24px #305698;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 24px 88px;
+
+    &:hover {
+      background: #1E4485;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+
   &_dark {
     background: #12151A;
     font-weight: 700;
