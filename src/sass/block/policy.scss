@@ -1,0 +1,15 @@
+.policy {
+  &__title {
+    max-width: 700px;
+    margin: 0 auto 60px;
+  }
+
+  &__text {
+    max-width: 864px;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: justify;
+  }
+}
