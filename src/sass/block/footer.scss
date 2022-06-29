@@ -1,0 +1,35 @@
+.footer {
+  padding: 48px 0 66px;
+  background: linear-gradient(180deg, rgba(35, 54, 83, 0) 0%, #12151A 100%);
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+
+    path {
+      fill: rgba($color-white, 0.7);
+      transition: 0.1s ease-out;
+    }
+
+    &:hover {
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &__copyright-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba($color-white, 0.7);
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
+}
