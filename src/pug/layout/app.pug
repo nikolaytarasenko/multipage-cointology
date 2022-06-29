@@ -7,7 +7,9 @@ html(lang="en")
         title Cointology
         link(rel="stylesheet", href="css/main.min.css")
     body
-        include ../chunk/header
-        block page
-        include ../chunk/footer
+        .wrapper
+            include ../chunk/header
+            main.main
+                block page
+            include ../chunk/footer
         script(src="js/main.js")

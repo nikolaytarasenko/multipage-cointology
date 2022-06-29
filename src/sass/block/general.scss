@@ -18,15 +18,16 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  &.service-page {
+    background: url("../img/service-ellipse.svg") right bottom no-repeat;
+    background-size: contain;
+  }
 }
 
-//.container {
-//  margin: 0 auto;
-//  padding: 0 15px;
-//  max-width: $content-size;
-//  width: 100%;
-//}
+.main {
+  flex: 1;
+}
 
 h1,
 h2,
@@ -127,11 +128,15 @@ img {
     }
   }
 
-  &_dark {
+  &_create {
     background: #12151A;
     font-weight: 700;
     padding: 24px;
     box-shadow: 15px 15px 32px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      background: $color-blue-dark;
+    }
   }
 }
 
