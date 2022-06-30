@@ -28,6 +28,7 @@ body {
 
 .main {
   flex: 1;
+  overflow-x: hidden;
 }
 
 h1,
@@ -148,4 +149,8 @@ img {
 
 .text-blue-light {
   color: $color-blue-light;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
