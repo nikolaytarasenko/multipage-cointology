@@ -1,6 +1,10 @@
 .navbar-light {
   &.navbar {
     padding: 11px 0;
+
+    @include media-breakpoint-down(md) {
+      background: linear-gradient(180deg, #12151A 6.4%, rgba(31, 42, 56, 0) 100%);
+    }
   }
 
   .navbar-nav {

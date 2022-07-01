@@ -18,6 +18,17 @@
     grid-template-columns: repeat(2, 377px);
     grid-column-gap: 8px;
     margin: 0 auto;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 377px;
+      grid-column-gap: 0;
+      grid-row-gap: 30px;
+      justify-content: center;
+    }
+
+    @include media-breakpoint-down(xs) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -25,14 +36,26 @@
     text-align: center;
     text-transform: capitalize;
 
+    @include media-breakpoint-down(xs) {
+      padding: 30px 20px;
+    }
+
     &_left {
       background: #0A4122;
       border-radius: 32px 0 0 32px;
+
+      @include media-breakpoint-down(lg) {
+        border-radius: 32px;
+      }
     }
 
     &_right {
       background: #5B1818;
       border-radius: 0 32px 32px 0;
+
+      @include media-breakpoint-down(lg) {
+        border-radius: 32px;
+      }
     }
   }
 

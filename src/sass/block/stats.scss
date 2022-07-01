@@ -44,6 +44,12 @@
     margin: 0 40px;
     background: url("../img/stats-list-bg.png") center no-repeat;
     background-size: contain;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 240px);
+      background-size: cover;
+    }
   }
 
   &__item {
@@ -56,6 +62,14 @@
       .stats__item-content {
         align-items: flex-end;
         right: 83px;
+
+        @include media-breakpoint-down(sm) {
+          right: 60px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          right: 43px;
+        }
       }
     }
   }
@@ -77,6 +91,11 @@
     font-size: 56px;
     font-weight: 800;
     line-height: 50px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 44px;
+      line-height: 54px;
+    }
   }
 
   &__item-sign {
@@ -98,6 +117,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      padding: 15px;
+      text-align: center;
+    }
   }
 
   &__footer-text {
@@ -112,5 +136,9 @@
     position: absolute;
     right: 125px;
     bottom: -20px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 }

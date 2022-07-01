@@ -13,6 +13,10 @@
       height: 180px;
       background: url("../img/withdrawal-decor.png") center no-repeat;
       background-size: cover;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 
@@ -20,9 +24,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
 
   &__item {
+    position: relative;
     max-width: 378px;
     width: 100%;
     padding: 120px 32px;
@@ -31,14 +41,62 @@
       background: rgba(255, 255, 255, 0.01);
       box-shadow: 0 0 56px rgba(0, 0, 0, 0.1);
       border-radius: 32px 0 0 32px;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 32px;
+      }
+
+      .withdrawal__item-decor--big {
+        left: -30px;
+        top: -30px;
+      }
+
+      .withdrawal__item-decor--small {
+        right: -30px;
+        bottom: 18px;
+
+        @include media-breakpoint-down(xs) {
+          right: -13px;
+        }
+      }
     }
 
     &_right {
       background: radial-gradient(123.58% 123.85% at 113.81% -17.23%, rgba(57, 140, 249, 0.5) 0%, rgba(113, 157, 214, 0) 66.15%), rgba(255, 255, 255, 0.2);
       border-radius: 0 32px 32px 0;
 
+      @include media-breakpoint-down(md) {
+        border-radius: 32px;
+      }
+
       .withdrawal__item-name {
         font-weight: 600;
+      }
+
+      .withdrawal__item-decor--big {
+        right: -23px;
+        top: 3px;
+
+        @include media-breakpoint-down(xs) {
+          right: -9px;
+        }
+      }
+
+      .withdrawal__item-decor--small {
+        left: -30px;
+        bottom: 18px;
+
+        @include media-breakpoint-down(xs) {
+          left: -9px;
+        }
+      }
+    }
+
+    .withdrawal__item-decor--small,
+    .withdrawal__item-decor--big {
+      position: absolute;
+      @include media-breakpoint-up(lg) {
+        display: none;
       }
     }
   }

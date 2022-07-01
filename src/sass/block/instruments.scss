@@ -1,6 +1,10 @@
 .instruments {
   position: relative;
 
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -18,11 +22,30 @@
   &__title {
     max-width: 800px;
     margin: 0 auto 80px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__mob-icons {
+    @include media-breakpoint-down(xs) {
+      display: block;
+      margin: 0 auto -20px;
+    }
   }
 
   &__list {
     position: relative;
     min-height: 880px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 450px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
 
   &__item {
@@ -37,6 +60,11 @@
     min-width: 104px;
     text-align: center;
 
+    @include media-breakpoint-down(sm) {
+      min-height: unset;
+      min-width: unset;
+    }
+
     &_1 {
       top: 350px;
       left: 0;
@@ -44,9 +72,26 @@
       height: 227px;
       font-size: 13px;
 
+      @include media-breakpoint-down(sm) {
+        top: 105px;
+        width: 114px;
+        height: 114px;
+        font-size: 6.5px;
+      }
+
       .instruments__item-container {
         max-width: 160px;
         margin-top: -20px;
+
+        @include media-breakpoint-down(sm) {
+          max-width: 82px;
+        }
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 46px;
+        }
       }
     }
 
@@ -55,6 +100,26 @@
       left: 80px;
       width: 198px;
       height: 198px;
+
+      @include media-breakpoint-down(lg) {
+        left: 40px;
+      }
+
+      @include media-breakpoint-down(md) {
+        left: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 83px;
+        height: 83px;
+        top: 234px;
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 63px;
+        }
+      }
     }
 
     &_3 {
@@ -64,8 +129,35 @@
       height: 275px;
       font-size: 18px;
 
+      @include media-breakpoint-down(lg) {
+        left: 110px;
+      }
+
+      @include media-breakpoint-down(md) {
+        left: 30px;
+        width: 220px;
+        height: 220px;
+        font-size: 14px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 115px;
+        height: 115px;
+        font-size: 9px;
+      }
+
       .instruments__item-container {
         max-width: 175px;
+
+        @include media-breakpoint-down(sm) {
+          max-width: 73px;
+        }
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 46px;
+        }
       }
     }
 
@@ -74,6 +166,24 @@
       left: 250px;
       width: 130px;
       height: 130px;
+
+      @include media-breakpoint-down(lg) {
+        top: 234px;
+        left: 188px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 55px;
+        height: 55px;
+        top: 40px;
+        left: 70px;
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 36px;
+        }
+      }
     }
 
     &_5 {
@@ -81,6 +191,23 @@
       left: 391px;
       width: 156px;
       height: 156px;
+
+      @include media-breakpoint-down(lg) {
+        left: 284px;
+      }
+
+      @include media-breakpoint-down(md) {
+        left: 220px;
+        width: 125px;
+        height: 125px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 65px;
+        height: 65px;
+        top: 67px;
+        left: 199px;
+      }
     }
 
     &_6 {
@@ -90,8 +217,43 @@
       height: 307px;
       font-size: 20px;
 
+      @include media-breakpoint-down(lg) {
+        left: 303px;
+        width: 280px;
+        height: 280px;
+      }
+
+      @include media-breakpoint-down(md) {
+        left: 250px;
+        width: 220px;
+        height: 220px;
+        font-size: 13px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 128px;
+        height: 128px;
+        top: 187px;
+        left: 117px;
+        font-size: 8.5px;
+      }
+
       .instruments__item-container {
         max-width: 195px;
+
+        @include media-breakpoint-down(md) {
+          max-width: 160px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          max-width: 81px;
+        }
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 51px;
+        }
       }
     }
 
@@ -100,6 +262,19 @@
       left: 560px;
       width: 104px;
       height: 104px;
+
+      @include media-breakpoint-down(lg) {
+        left: 450px;
+      }
+
+      @include media-breakpoint-down(md) {
+        left: 272px;
+        bottom: 131px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
     }
 
     &_8 {
@@ -107,6 +282,32 @@
       left: 602px;
       width: 194px;
       height: 194px;
+
+      @include media-breakpoint-down(lg) {
+        left: 475px;
+        width: 157px;
+        height: 157px;
+      }
+
+      @include media-breakpoint-down(md) {
+        top: 70px;
+        left: 370px;
+        width: 142px;
+        height: 142px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 81px;
+        height: 81px;
+        top: 38px;
+        left: 374px;
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 47px;
+        }
+      }
     }
 
     &_9 {
@@ -114,6 +315,33 @@
       left: 765px;
       width: 187px;
       height: 187px;
+
+      @include media-breakpoint-down(lg) {
+        bottom: 177px;
+        left: 591px;
+        width: 149px;
+        height: 149px;
+      }
+
+      @include media-breakpoint-down(md) {
+        bottom: 170px;
+        left: 458px;
+        width: 140px;
+        height: 140px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 106px;
+        height: 106px;
+        left: 245px;
+        bottom: 30px;
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 62px;
+        }
+      }
     }
 
     &_10 {
@@ -123,8 +351,47 @@
       height: 307px;
       font-size: 20px;
 
+      @include media-breakpoint-down(lg) {
+        top: 173px;
+        right: 18px;
+        width: 265px;
+        height: 265px;
+        font-size: 14px;
+      }
+
+      @include media-breakpoint-down(md) {
+        top: 190px;
+        right: 16px;
+        width: 210px;
+        height: 210px;
+        font-size: 10px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 128px;
+        height: 128px;
+        left: 281px;
+        bottom: unset;
+        top: 152px;
+        font-size: 8px;
+      }
+
       .instruments__item-container {
         max-width: 195px;
+
+        @include media-breakpoint-down(md) {
+          max-width: 120px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          max-width: 81px;
+        }
+      }
+
+      .instruments__item-icon {
+        @include media-breakpoint-down(sm) {
+          max-width: 50px;
+        }
       }
     }
 
@@ -133,6 +400,13 @@
       bottom: 0;
       width: 156px;
       height: 156px;
+
+      @include media-breakpoint-down(sm) {
+        width: 106px;
+        height: 106px;
+        right: 0;
+        bottom: 40px;
+      }
     }
 
     &_12 {
@@ -140,6 +414,21 @@
       bottom: 220px;
       width: 128px;
       height: 128px;
+
+      @include media-breakpoint-down(lg) {
+        bottom: 250px;
+      }
+
+      @include media-breakpoint-down(md) {
+        bottom: 325px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 53px;
+        height: 53px;
+        right: 0;
+        bottom: 200px;
+      }
     }
   }
 }
