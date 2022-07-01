@@ -16,12 +16,20 @@
     border-radius: 6px;
     text-align: center;
 
+    @include media-breakpoint-down(lg) {
+      margin: 0 auto 32px;
+    }
+
     &_second {
       margin: 0 auto;
     }
 
     &_third {
       margin-left: auto;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
     }
   }
 

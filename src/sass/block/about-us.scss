@@ -4,8 +4,19 @@
   background: url("../img/about-us-bg.svg") right bottom no-repeat;
   background-size: contain;
 
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+  }
+
   &__content {
     max-width: 445px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      margin-top: 30px;
+    }
   }
 
   &__subtitle {
@@ -19,6 +30,11 @@
     font-size: 28px;
     font-weight: 600;
     line-height: 34px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 27px;
+      line-height: 33px;
+    }
   }
 
   &__img {
@@ -27,5 +43,14 @@
     left: -24px;
     position: absolute;
     max-width: max-content;
+
+    @include media-breakpoint-down(lg) {
+      position: relative;
+      width: auto;
+      height: auto;
+      left: unset;
+      margin-top: 50px;
+      max-width: 100%;
+    }
   }
 }
