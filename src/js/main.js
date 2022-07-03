@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import AOS from 'aos';
 import 'bootstrap/js/dist/collapse.js';
 
 const setActiveNavLink = () => {
@@ -49,5 +50,15 @@ const domContentLoadedHandler = () => {
   toggleHamburgerMenu();
 }
 
+const loadHandler = () => {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false
+  });
+}
+
 window.addEventListener('resize', resizeHandler);
 window.addEventListener('DOMContentLoaded', domContentLoadedHandler);
+window.addEventListener('load', loadHandler);

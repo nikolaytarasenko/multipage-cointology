@@ -24,7 +24,7 @@
 
   &__title {
     max-width: 850px;
-    margin: 0 auto 48px;
+    margin: 0 auto 100px;
   }
 
   &__content {
@@ -44,7 +44,10 @@
   }
 
   &__img-wrapper {
-    text-align: right;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
 
     @include media-breakpoint-down(lg) {
       text-align: center;
@@ -52,10 +55,114 @@
   }
 
   &__img {
-    margin-right: 100px;
+    max-height: 400px;
 
     @include media-breakpoint-down(lg) {
       margin-right: 0;
+    }
+
+    animation: 2s ease-in-out 0s infinite alternate moveY;
+
+    transform-style: preserve-3d;
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+
+    &:hover {
+      transform:
+          translate3d(0px, -16px, 0px);
+    }
+  }
+
+  &__company-img {
+    position: absolute;
+    filter: drop-shadow(-17px 14px 10px rgba(0,0,0,.6));
+    transition: 0.2s ease-in-out transform;
+    animation: 2s 0s ease-in-out infinite alternate moveIconsY;
+
+    &_apple {
+      width: 101px;
+      top: 100px;
+      right: 16px;
+      animation-name: moveAppleY;
+      animation-delay: 50ms;
+    }
+
+    &_fire {
+      width: 96px;
+      top: 205px;
+      left: 121px;
+      animation-name: moveFireY;
+      animation-delay: 200ms;
+    }
+
+    &_gold {
+      width: 80px;
+      top: 32px;
+      right: 153px;
+      animation-delay: 74ms;
+
+      @include media-breakpoint-down(xs) {
+        top: -56px;
+        right: 170px;
+      }
+    }
+
+    &_google {
+      width: 99px;
+      top: -38px;
+      right: 51px;
+      animation-name: moveGoogleY;
+      animation-delay: 104ms;
+    }
+
+    &_meta {
+      width: 91px;
+      top: 100px;
+      left: 142px;
+      animation-delay: 46ms;
+    }
+
+    &_nasdaq {
+      width: 82px;
+      top: 0;
+      left: 70px;
+      z-index: -1;
+      animation-name: moveNasdaqY;
+      animation-delay: 100ms;
+      animation-duration: 3500ms;
+
+      @include media-breakpoint-down(xs) {
+        top: -41px;
+        left: 21px;
+      }
+    }
+
+    &_netflix {
+      width: 92px;
+      top: 247px;
+      right: 84px;
+      z-index: -1;
+      animation-delay: 24ms;
+
+      @include media-breakpoint-down(xs) {
+        right: 10px;
+      }
+    }
+
+    &_oil {
+      width: 80px;
+      top: 122px;
+      left: 10px;
+      animation-name: moveOilY;
+      animation-delay: 255ms;
+    }
+
+    &_tesla {
+      width: 94px;
+      top: 327px;
+      left: 69px;
+      animation-delay: 63ms;
     }
   }
 
@@ -79,5 +186,72 @@
   .button {
     width: 100%;
     max-width: 300px;
+  }
+}
+
+@keyframes moveY {
+  0% {
+    transform:
+        translate3d(0px, 0, 0px);
+  }
+  100% {
+    transform:
+        translate3d(0px, -10px, 0px);
+  }
+}
+
+@keyframes moveIconsY {
+  0% {
+    transform:
+        translate3d(0px, 0, 0px);
+  }
+  100% {
+    transform:
+        translate3d(0px, 10px, 0px);
+  }
+}
+
+@keyframes moveAppleY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes moveGoogleY {
+  0% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(0, 20px);
+  }
+}
+
+@keyframes moveNasdaqY {
+  0% {
+    transform: translate(-10px, 0);
+  }
+  100% {
+    transform: translate(4px, 20px);
+  }
+}
+
+@keyframes moveFireY {
+  0% {
+    transform: translate(-3px, 0);
+  }
+  100% {
+    transform: translate(4px, 30px);
+  }
+}
+
+@keyframes moveOilY {
+  0% {
+    transform: translate(-2px, -15px);
+  }
+  100% {
+    transform: translate(2px, 0);
   }
 }
