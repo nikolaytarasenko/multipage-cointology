@@ -41,6 +41,12 @@ const closeHamburgerMenu = () => {
   }
 }
 
+const hidePreloader = () => {
+  const preloaderWrapper = document.querySelector('.preloader-wrapper');
+
+  preloaderWrapper.classList.add('hide');
+}
+
 const resizeHandler = () => {
   closeHamburgerMenu();
 }
@@ -57,6 +63,8 @@ const loadHandler = () => {
     once: true,
     mirror: false
   });
+
+  hidePreloader();
 }
 
 window.addEventListener('resize', resizeHandler);

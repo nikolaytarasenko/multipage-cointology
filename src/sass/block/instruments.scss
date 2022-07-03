@@ -29,6 +29,8 @@
   }
 
   &__mob-icons {
+    display: none;
+
     @include media-breakpoint-down(xs) {
       display: block;
       margin: 0 auto -20px;
