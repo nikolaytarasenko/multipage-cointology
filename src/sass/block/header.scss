@@ -1,5 +1,9 @@
 .header {
+  position: sticky;
+  width: 100%;
+  top: 0;
   min-height: 0;
+  z-index: 99;
   transition: min-height 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   @media (max-width: 991.98px) {
@@ -31,6 +35,29 @@
     }
   }
 
+  &.sticky {
+    background: $color-dark;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+
+    @include media-breakpoint-down(sx) {
+      box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+    }
+
+    .logo {
+      svg {
+        max-width: 120px;
+      }
+    }
+
+    .container {
+      align-items: center!important;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+      margin-top: -4px;
+    }
+  }
+
   &.mobile-open {
     min-height: 100vh;
     background-color: #12151A;
@@ -42,7 +69,17 @@
     }
   }
 
+  .navbar-expand-lg .navbar-collapse {
+    transition: 0.2s ease-in-out;
+    margin-top: 23px;
+  }
+
   .logo {
+    svg {
+      max-width: 100%;
+      transition: 0.2s ease-in-out;
+    }
+
     @include media-breakpoint-down(xs) {
       margin-left: 15px;
     }

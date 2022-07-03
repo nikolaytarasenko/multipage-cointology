@@ -41,6 +41,13 @@ const closeHamburgerMenu = () => {
   }
 }
 
+const initStickyHeader = e => {
+  const header = document.querySelector('.header');
+  const scrollY = window.scrollY;
+
+  header.classList.toggle('sticky', scrollY > 0);
+}
+
 const hidePreloader = () => {
   const preloaderWrapper = document.querySelector('.preloader-wrapper');
 
@@ -54,6 +61,8 @@ const resizeHandler = () => {
 const domContentLoadedHandler = () => {
   setActiveNavLink();
   toggleHamburgerMenu();
+
+  window.addEventListener('scroll', initStickyHeader);
 }
 
 const loadHandler = () => {
