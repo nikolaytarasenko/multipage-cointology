@@ -9,6 +9,10 @@
 
   &__content {
     margin-top: 56px;
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 30px;
+    }
   }
 
   &__title {
@@ -29,5 +33,9 @@
       display: block;
       margin-bottom: 16px;
     }
+  }
+
+  &__button-wrapper {
+    display: inline-block;
   }
 }

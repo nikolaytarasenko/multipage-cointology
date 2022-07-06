@@ -12,6 +12,10 @@
     filter: blur(200px);
     border-radius: 50%;
     z-index: -1;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
 
   &__title {

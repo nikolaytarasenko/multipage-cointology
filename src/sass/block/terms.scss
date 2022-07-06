@@ -19,6 +19,7 @@
       height: 516px;
       right: -400px;
       top: -255px;
+      display: none;
     }
   }
 
@@ -186,6 +187,12 @@
   .button {
     width: 100%;
     max-width: 300px;
+  }
+
+  &__button-wrapper {
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;
   }
 }
 
