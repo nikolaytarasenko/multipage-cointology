@@ -13,6 +13,10 @@ body {
   background: $color-dark;
   color: $color-white;
   overflow-x: hidden;
+
+  &.scrolled {
+    padding-top: 70px;
+  }
 }
 
 .wrapper {
@@ -23,6 +27,11 @@ body {
   &.service-page {
     background: url("../img/service-ellipse.svg") right bottom no-repeat;
     background-size: contain;
+  }
+
+  &.info-page {
+    background: url("../img/logo.svg") center fixed no-repeat;
+    background-size: 50% 50%;
   }
 }
 
@@ -42,12 +51,13 @@ h6 {
 
 a {
   display: inline-block;
-  color: red;
+  color: #52a5ed;
   text-decoration: none;
   transition: 0.15s ease-out;
 
   &:hover {
-    color: #23233C;
+    color: #ff6262;
+    text-decoration: none;
   }
 }
 

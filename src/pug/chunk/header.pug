@@ -25,6 +25,13 @@ header.header
         ul.navbar-nav
           li.nav-item
             a.nav-link(href='./') Главная
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-expanded='false')
+              | Клиентам
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='./withdrawal-policy.html') Политика вывода средств
+              a.dropdown-item(href='./kyc.html') Верификация
+              a.dropdown-item(href='./advices.html') Советы
           li.nav-item
             a.nav-link(href='./about.html') О нас
           li.nav-item

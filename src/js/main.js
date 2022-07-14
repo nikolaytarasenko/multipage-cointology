@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import AOS from 'aos';
+import 'popper.js/dist/umd/popper.min.js';
 import 'bootstrap/js/dist/collapse.js';
+import 'bootstrap/js/dist/dropdown.js';
 
 const setActiveNavLink = () => {
   const currentPageName = window.location.pathname.slice(1, -5) || '/';
@@ -46,12 +48,39 @@ const initStickyHeader = e => {
   const scrollY = window.scrollY;
 
   header.classList.toggle('sticky', scrollY > 0);
+  document.body.classList.toggle('scrolled', scrollY > 0);
 }
 
 const hidePreloader = () => {
   const preloaderWrapper = document.querySelector('.preloader-wrapper');
 
   preloaderWrapper.classList.add('hide');
+}
+
+const flipServiceCard = () => {
+  if (document.querySelector('.service__item')) {
+    const cards = document.querySelectorAll('.service__item');
+
+    cards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        const cardContainer = e.target.closest('.card-flip');
+
+        cards.forEach(item => {
+          if (item !== cardContainer) item.classList.remove('flipped');
+        });
+
+        cardContainer.classList.contains('flipped') ?
+            cardContainer.classList.remove('flipped') :
+            cardContainer.classList.add('flipped');
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.card-flip')) {
+        cards.forEach(item => item.classList.remove('flipped'));
+      }
+    });
+  }
 }
 
 const initStats = () => {
@@ -67,8 +96,8 @@ const initStats = () => {
 
   const deals = {
     all: {
-      min: 1500,
-      max: 1550,
+      min: 1512,
+      max: 1940,
       increase() {
         return this.max - this.min;
       }
@@ -152,7 +181,7 @@ const initStats = () => {
     updateStorage(allDealsCurrent, profitableDealsCurrent, Math.floor(dollarProfitCurrent));
 
     renderStats();
-  }, 4000);
+  }, 9000);
 }
 
 const resizeHandler = () => {
@@ -163,6 +192,7 @@ const domContentLoadedHandler = () => {
   setActiveNavLink();
   toggleHamburgerMenu();
   initStats();
+  flipServiceCard();
 
   window.addEventListener('scroll', initStickyHeader);
 }

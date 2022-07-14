@@ -54,6 +54,7 @@
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
-    "normalize.scss": "^0.1.0"
+    "normalize.scss": "^0.1.0",
+    "popper.js": "^1.16.1"
   }
 }
