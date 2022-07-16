@@ -1,0 +1,209 @@
+.signals {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    right: 100px;
+    bottom: 400px;
+    background: rgba(48,86,152,0.8);
+    -webkit-filter: blur(200px);
+    filter: blur(200px);
+    border-radius: 50%;
+    z-index: -1;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  &__title {
+    max-width: 800px;
+    margin: 0 auto 80px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 80px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-breakpoint-down(xs) {
+      grid-template-columns: 50% 50%;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    padding: 32px 30px;
+    text-align: center;
+
+    @include media-breakpoint-down(xs) {
+      padding: 20px 10px;
+    }
+
+    &:first-child {
+      border-radius: 16px 0 0 16px;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 16px 0 0 0;
+      }
+    }
+
+    &:last-child {
+      border-radius: 0 16px 16px 0;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 0 0 16px 0;
+      }
+
+      .signals__item-img {
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
+    }
+
+    &:nth-child(2) {
+      @include media-breakpoint-down(md) {
+        border-radius: 0 16px 0 0;
+      }
+    }
+
+    &:nth-child(3) {
+      @include media-breakpoint-down(md) {
+        grid-column: 1 / 3;
+        background: rgba(18, 21, 26, 0.32)!important;
+      }
+    }
+
+    &:nth-child(4) {
+      @include media-breakpoint-down(md) {
+        border-radius: 0 0 0 16px;
+      }
+    }
+
+    &:nth-child(odd) {
+      background: rgba(18, 21, 26, 0.2);
+    }
+
+    &:nth-child(even) {
+      background: rgba(18, 21, 26, 0.5);
+    }
+
+    &-img {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 27px;
+      margin-bottom: 5px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 18px;
+        word-break: break-word;
+      }
+    }
+
+    &-text {
+      padding: 0 10px;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 23px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 343px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 343px);
+    }
+  }
+
+  &__plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 49px;
+
+    &:first-child {
+      background: radial-gradient(123.58% 123.85% at 111.81% -1.23%,rgba(113,157,214,0) 98.42%,rgba(57,140,249,.5) 130%),rgba(255,255,255,.2);
+      backdrop-filter: blur(32px);
+      border-radius: 32px 0 0 32px;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 32px 32px 0 0;
+      }
+    }
+
+    &:nth-child(2) {
+      background: rgba(255, 255, 255, 0.01);
+      box-shadow: 0 0 56px rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-child {
+      background: radial-gradient(123.58% 123.85% at 113.81% -17.23%, rgba(57, 140, 249, 0.5) 0%, rgba(113, 157, 214, 0) 36.35%), rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(32px);
+      border-radius: 0 32px 32px 0;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 0 0 32px 32px;
+      }
+    }
+
+    &-title {
+      color: #9CC7FF;
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      padding: 0;
+      margin-bottom: 0;
+      text-align: center;
+      list-style: none;
+    }
+
+    &-item {
+      position: relative;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+
+      &::before {
+        position: relative;
+        background: #fff;
+        content: "";
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        left: -11px;
+        top: -4px;
+      }
+    }
+  }
+}

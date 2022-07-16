@@ -31,7 +31,11 @@ body {
 
   &.info-page {
     background: url("../img/logo.svg") center fixed no-repeat;
-    background-size: 50% 50%;
+    background-size: 700px 700px;
+
+    @include media-breakpoint-down(xs) {
+      background-size: 300px 300px;
+    }
   }
 }
 
