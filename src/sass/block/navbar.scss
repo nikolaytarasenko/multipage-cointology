@@ -17,11 +17,40 @@
         }
       }
 
+      &.dropdown {
+        .dropdown-toggle {
+          &::after {
+            background: url("../img/arrow-down.svg") center no-repeat;
+            width: 12px;
+            height: 8px;
+            border: 0;
+            margin-left: 8px;
+            transition: 0.15s transform ease;
+          }
+        }
+
+        &:hover {
+          @include media-breakpoint-up(lg) {
+            .dropdown-toggle {
+              &::after {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+
       &.dropdown.show {
         .dropdown-toggle {
           &::after {
             transform: rotate(180deg);
           }
+        }
+      }
+
+      &:last-child {
+        .nav-link {
+          padding-right: 0;
         }
       }
     }
@@ -62,6 +91,8 @@
 
     .dropdown-menu {
       top: 35px;
+      right: 0;
+      left: unset;
 
       @include media-breakpoint-down(md) {
         margin-top: 20px;
@@ -71,9 +102,9 @@
       &::before {
         content: "";
         position: absolute;
-        top: -13px;
+        top: -15px;
         left: -1px;
-        width: 112px;
+        width: 241px;
         height: 20px;
         background: transparent;
 

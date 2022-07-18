@@ -1,0 +1,58 @@
+.beginners {
+  background: url("../img/beginners-bg.svg") right bottom no-repeat;
+  background-size: contain;
+  min-height: 694px;
+
+  @include media-breakpoint-down(xs) {
+    min-height: auto;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 140px;
+    font-size: 18px;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 90px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__description {
+    max-width: 939px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 9px;
+      margin-bottom: 100px;
+    }
+  }
+}
