@@ -8703,6 +8703,15 @@ img {
   background: #0E3565;
 }
 
+.button_choose {
+  background: #06873e;
+}
+
+.button_choose:hover {
+  background: #057837;
+  color: #FFFFFF;
+}
+
 .hide {
   opacity: 0;
   visibility: hidden;
@@ -9624,7 +9633,7 @@ img {
 .signals__plans {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 343px;
+  grid-template-rows: 420px;
 }
 
 .signals__plan {
@@ -9687,6 +9696,7 @@ img {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
+  padding: 10px 0;
 }
 
 .signals__plan-item::before {
@@ -9699,6 +9709,10 @@ img {
   border-radius: 50%;
   left: -11px;
   top: -4px;
+}
+
+.signals__plan-button {
+  margin-top: 20px;
 }
 
 .different {
@@ -10281,6 +10295,14 @@ img {
   border-radius: 8px;
   padding: 15px;
   font-size: 14px;
+  text-align: center;
+}
+
+.card-back ul {
+  list-style: inside;
+  padding-left: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .about-us {
@@ -10420,12 +10442,17 @@ img {
   margin-bottom: 70px;
 }
 
+.text-page .card {
+  background: #2e4155;
+}
+
 .text-page .card-header {
   padding: 0;
 }
 
 .text-page .card-body {
-  color: #1F2A38;
+  color: #f5f5f5;
+  background: #3c566f;
 }
 
 .text-page .card-body p:last-child {
@@ -10436,6 +10463,7 @@ img {
   padding: 15px 20px;
   font-family: "Montserrat", Arial, sans-serif;
   border-radius: 0;
+  position: relative;
 }
 
 .text-page .btn:hover {
@@ -10449,13 +10477,28 @@ img {
 }
 
 .text-page .btn[aria-expanded=true] {
-  background: #CCCCCC;
-  color: #1F2A38;
+  background: #2e4155;
+  color: #f5f5f5;
   font-weight: 600;
 }
 
+.text-page .btn[aria-expanded=true]::after {
+  content: "–";
+}
+
+.text-page .btn::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
 .text-page .btn-link {
-  color: #0660c1;
+  color: #FFFFFF;
 }
 
 .text-page__ordered-list {
@@ -15510,7 +15553,7 @@ img {
 
   .signals__plans {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 343px);
+    grid-template-rows: repeat(3, 420px);
   }
 
   .signals__plan:first-child {
@@ -15566,6 +15609,10 @@ img {
     background: -o-linear-gradient(top, #1f2a38, rgba(18, 21, 26, 0.5));
     background: linear-gradient(to bottom, #1f2a38, rgba(18, 21, 26, 0.5));
     padding-top: 0;
+  }
+
+  .text-page .btn {
+    padding: 15px 40px 15px 20px;
   }
 }
 

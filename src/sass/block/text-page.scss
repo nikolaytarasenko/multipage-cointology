@@ -28,12 +28,17 @@
     margin-bottom: 70px;
   }
 
+  .card {
+    background: #2e4155;
+  }
+
   .card-header {
     padding: 0;
   }
 
   .card-body {
-    color: $color-dark;
+    color: #f5f5f5;
+    background: #3c566f;
 
     p {
       &:last-child {
@@ -46,6 +51,11 @@
     padding: 15px 20px;
     font-family: $font-family;
     border-radius: 0;
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      padding: 15px 40px 15px 20px;
+    }
 
     &:hover {
       text-decoration: none;
@@ -57,14 +67,27 @@
     }
 
     &[aria-expanded="true"] {
-      background: #CCCCCC;
-      color: #1F2A38;
+      background: #2e4155;
+      color: #f5f5f5;
       font-weight: 600;
+
+      &::after {
+        content: "–";
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "+";
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
     }
   }
 
   .btn-link {
-    color: #0660c1;
+    color: $color-white;
   }
 
   &__ordered-list {

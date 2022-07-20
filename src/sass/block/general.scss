@@ -184,6 +184,15 @@ img {
       background-color: $color-blue-dark;
     }
   }
+
+  &_choose {
+    background-color: #06873e;
+
+    &:hover {
+      background-color: darken(#06873e, 3%);
+      color: $color-white;
+    }
+  }
 }
 
 .hide {
